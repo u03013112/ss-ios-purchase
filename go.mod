@@ -1,4 +1,4 @@
-module ss-ios-purchase
+module github.com/u03013112/ss-ios-purchase
 
 go 1.12
 
