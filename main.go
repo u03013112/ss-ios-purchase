@@ -14,6 +14,7 @@ const (
 )
 
 func main() {
+	ios.InitDB()
 	lis, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
