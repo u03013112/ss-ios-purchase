@@ -64,6 +64,9 @@ func (s *Srv) Purchase(ctx context.Context, in *pb.PurchaseRequest) (*pb.Purchas
 		}
 		// user.updateExpireDate(t, in.Data)
 		user.updateExpireDate(t, "too long")
+
+		recordBills(str,user.UUID)
+
 		return &pb.PurchaseReply{
 			ExpiresDate: ex / int64(1000),
 		}, nil

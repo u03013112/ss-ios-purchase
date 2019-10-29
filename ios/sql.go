@@ -23,7 +23,7 @@ func (User) TableName() string {
 
 // InitDB : 初始化表格，建议在整个数据库初始化之后调用
 func InitDB() {
-	sql.GetInstance().AutoMigrate(&User{})
+	sql.GetInstance().AutoMigrate(&User{}, &Bills{})
 }
 
 func getOrCreateUserByUUID(uuid string) User {
